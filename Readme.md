@@ -1,5 +1,13 @@
-<h1 id="reac-native-todolist">reac-native-todolist</h1>
+<h1 id="react-native-todolist">react-native-todolist</h1>
 <p>The react-native-todolist application is a cross-platform mobile application developed using the React-Native framework with Redux implementation. The application has features to create a calendar in both Google &amp; Microsoft cloud platforms, users can also receive a push notification from the server based on topic subscription.</p>
+
+<table>
+  <tr>
+    <td><img src="screenshots/react_native_logo.png" width="150" height="150"/></td>
+    <td><img src="screenshots/redux.png" width="250" height="200"/></td>
+  </tr>
+</table>
+
 <h1 id="features-">Features!</h1>
 <ul>
 <li>Social SignIn with Google, Microsoft, Facebook.</li>
@@ -68,7 +76,7 @@
 <p>To start the application on both <code>Android</code> &amp; <code>iOS</code> , there are two different command needs to be followed.</p>
 <h5 id="android-npx-react-native-run-android-">Android - <code>npx react- native run-android</code></h5>
 <h5 id="ios-npx-react-native-run-ios-">iOS - <code>npx react- native run-ios</code></h5>
-<h2 id="redux">Redux</h2>
+<img src="screenshots/redux.png" width="250" height="200"/>
 <p>Redux is an open-source JavaScript library for managing and organizing application state . There are major concepts like <code>actions</code> , <code>reducers</code> , and <code>stores</code> that Redux provides to implement a universal state for an entire application lifecycle.</p>
 <blockquote>
 <p>Official Documentation - <a href="https://redux.js.org/">https://redux.js.org/</a></p>
@@ -79,7 +87,7 @@ $ npm <span class="hljs-keyword">install</span> react-redux
 $ npm <span class="hljs-keyword">install</span> redux-thunk
 $ npm <span class="hljs-keyword">install</span> redux-logger
 </code></pre>
-<h1 id="npm-modules">npm modules</h1>
+<h1 id="npm-modules"><img src="screenshots/npm.png" width="250" height="200"/> modules</h1>
 <ul>
 <li><a href="https://www.npmjs.com/package/react-native-google-signin">react -native-google-signin</a></li>
 <li><a href="https://www.npmjs.com/package/react-native-app-auth">react -native-app-auth</a></li>
