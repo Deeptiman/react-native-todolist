@@ -320,5 +320,11 @@ integration in the application. However, the application also allows creating a 
     </td>
   </tr>
  </table>
-
+ 
+<h2>References</h2>
+<ul>
+<li><a href="https://reactnative.dev/docs/getting-started">Getting Started with React-Native</a></li>
+<li><a href="https://redux.js.org/introduction/getting-started">Getting Started with Redux</a></li>
+<li><a href="https://rnfirebase.io/">React Native Firebase</a></li>
+</ul>
 
