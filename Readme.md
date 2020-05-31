@@ -227,7 +227,7 @@ integration in the application. However, the application also allows creating a 
 <li><h5 id="send-invite-for-access-permission">Send Invite for access permission</h5>
   To access the attached link of the event, each attendee needs access permission from the <code>organizer</code>. So, in the request parameter the array of attendees email needs to be included.</li>
 </ul>
-<h3 id="firebase-calendar">Firebase Calendar</h3>
+<img src="screenshots/firebase.png" width="300" height="100"/>
 <p>The users that are signed-in via <code>Facebook</code> and <code>Firebase</code> can able to create a calendar with Firebase database but the features like adding attachments, online conference, invite attendees, set reminders will not be supported.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh"><span class="hljs-bullet">- </span>/src/actions/FirebaseCalendar.js
@@ -237,6 +237,7 @@ integration in the application. However, the application also allows creating a 
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh">- <span class="hljs-regexp">/src/</span>components<span class="hljs-regexp">/calendar/</span>EventDetailsComponent.js
 </code></pre>
+<img src="screenshots/fcm.png" width="300" height="150"/>
 <h2 id="push-notification">Push Notification</h2>
 <p>This application has a feature that the user can receive a <code>push notification</code> via <code>Firebase Cloud Messaging</code> servie. User can subscribe to a topic to receive notification an alert.</p>
 <h3 id="sending-push-notification-api">Sending Push Notification API</h3>
@@ -260,15 +261,15 @@ integration in the application. However, the application also allows creating a 
         <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://example.com/test.png"</span>
     },
     <span class="hljs-attr">"data"</span>: {
-  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Spacex successfully launched first crew to orbit"</span>,
-  <span class="hljs-attr">"body"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
-  <span class="hljs-attr">"topic"</span>: <span class="hljs-string">"Science"</span>,
-  <span class="hljs-attr">"small_text"</span>: <span class="hljs-string">"hello"</span>,
-  <span class="hljs-attr">"big_text"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
-  <span class="hljs-attr">"time"</span>: <span class="hljs-string">"273737"</span>,
-  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://example.com/test.png"</span>,
-  <span class="hljs-attr">"foreground"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"android_channel_id"</span>: <span class="hljs-string">"test-channel"</span>
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Spacex successfully launched first crew to orbit"</span>,
+        <span class="hljs-attr">"body"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
+        <span class="hljs-attr">"topic"</span>: <span class="hljs-string">"Science"</span>,
+        <span class="hljs-attr">"small_text"</span>: <span class="hljs-string">"hello"</span>,
+        <span class="hljs-attr">"big_text"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
+        <span class="hljs-attr">"time"</span>: <span class="hljs-string">"273737"</span>,
+        <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://example.com/test.png"</span>,
+        <span class="hljs-attr">"foreground"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"android_channel_id"</span>: <span class="hljs-string">"test-channel"</span>
  },
     <span class="hljs-attr">"priority"</span>: <span class="hljs-string">"high"</span>,
     <span class="hljs-attr">"to"</span>: <span class="hljs-string">"/topics/Science"</span>
