@@ -274,10 +274,14 @@ integration in the application. However, the application also allows creating a 
       <p><b>SignIn</b></p>
       <img src="screenshots/mobile_signin.png" width="300" height="600"/>
     </td>
+  </tr>
+  <tr>
     <td>
       <p><b>Calendar</b></p>
       <img src="screenshots/mobile_calendar.png" width="300" height="600"/>
     </td>
+   </tr>
+  <tr>
     <td>
       <p><b>Search Planners</b></p>
       <img src="screenshots/mobile_all_calendars.png" width="300" height="600"/>
@@ -288,24 +292,32 @@ integration in the application. However, the application also allows creating a 
       <p><b>Create Calendar</b></p>
       <img src="screenshots/mobile_create_planner.png" width="300" height="600"/>
     </td>
+    </tr>
+  <tr>
     <td>
       <p><b>Calendar Created Alert</b></p>
       <img src="screenshots/mobile_create_calendar.png" width="300" height="600"/>
     </td>
+    </tr>
+  <tr>
     <td>
       <p><b>View Planner</b></p>
       <img src="screenshots/mobile_planner.png" width="300" height="600"/>
     </td>
-  </tr>
+    </tr>
   <tr>
     <td>
       <p><b>Share Planner</b></p>
       <img src="screenshots/mobile_share_planner.png" width="300" height="600"/>
     </td>
+    </tr>
+  <tr>
     <td>
       <p><b>News Push Notification</b></p>
       <img src="screenshots/mobile_notification.png" width="300" height="600"/>
     </td>
+    </tr>
+  <tr>
     <td>
       <p><b>News</b></p>
       <img src="screenshots/mobile_news.png" width="300" height="600"/>
