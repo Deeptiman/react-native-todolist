@@ -58,6 +58,7 @@
 <li><p>The latest version of <code>Xcode 9.4</code> or the latest has to be installed in the system</p>
 <h5 id="xcode-command-line-tools">Xcode Command Line Tools</h5>
 <p>  There are a few Xcode command-line tools that need to be installed.</p>
+<img src="screenshots/xcode.png" width="600" height="550"/>
 <ul>
 <li>Open <code>Xcode</code> , then choose <code>Preference</code> from the Xcode menu.</li>
 <li><p>Go to the <code>Location</code> panel and install the tools by selecting from the most recent version of the command-line tool from the dropdown.</p>
