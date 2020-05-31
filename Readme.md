@@ -73,7 +73,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="running-react-native-application">Running React-Native application</h4>
+<h3 id="running-react-native-application">Running React-Native application</h3>
 <p>To start the application on both <code>Android</code> &amp; <code>iOS</code> , there are two different command needs to be followed.</p>
 <h5 id="android-npx-react-native-run-android-">Android - <code>npx react- native run-android</code></h5>
 <h5 id="ios-npx-react-native-run-ios-">iOS - <code>npx react- native run-ios</code></h5>
@@ -237,7 +237,7 @@ integration in the application. However, the application also allows creating a 
 </code></pre>
 <img src="screenshots/fcm.png" width="300" height="150"/>
 <h2 id="push-notification">Push Notification</h2>
-<p>This application has a feature that the user can receive a <code>push notification</code> via <code>Firebase Cloud Messaging</code> servie. User can subscribe to a topic to receive notification an alert.</p>
+<p>This application has a feature that the user can receive a <code>push notification</code> via <code>Firebase Cloud Messaging</code> service. User can subscribe to a topic to receive notification an alert.</p>
 <h3 id="sending-push-notification-api">Sending Push Notification API</h3>
 <h5 id="api-endpoint">API endpoint</h5>
 <pre><code class="lang-sh">https:<span class="hljs-regexp">//</span>fcm.googleapis.com<span class="hljs-regexp">/fcm/</span>send
