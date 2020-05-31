@@ -45,10 +45,10 @@
 <li>After that in the user variable click on <code>New</code> and create a new <code>ANDROID_HOME</code> variable and the value will the local installation path of Android SDK<h6 id="linux-mac-os-">Linux &amp; Mac OS -</h6>
 </li>
 <li><h6 id="open-the-terminal-and-type">Open the terminal and type</h6>
-  <code>$nano ~/.bash_profile</code>
-  <code>$ export ANDROID_HOME=/YOUR_PATH_TO/android-sdk</code>
-  <code>$ export PATH=$ANDROID_HOME/platform-tools:$PATH</code>
-  <code>$source ~/.bash_profile</code> </li>
+  <p><code>$nano ~/.bash_profile</code></p>
+  <p><code>$ export ANDROID_HOME=/YOUR_PATH_TO/android-sdk</code></p>
+  <p><code>$ export PATH=$ANDROID_HOME/platform-tools:$PATH</code></p>
+  <p><code>$source ~/.bash_profile</code></p> </li>
 </ul>
 </li>
 </ul>
