@@ -332,3 +332,5 @@ integration in the application. However, the application also allows creating a 
 <li><a href="https://rnfirebase.io/">React Native Firebase</a></li>
 </ul>
 
+<h2>License</h2>
+<p>This project is licensed under the <a href="https://github.com/Deeptiman/react-native-todolist/blob/master/LICENSE">MIT License</a></p>
