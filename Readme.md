@@ -1,5 +1,13 @@
-<h1 id="reac-native-todolist">reac-native-todolist</h1>
+<h1 id="react-native-todolist">react-native-todolist</h1>
 <p>The react-native-todolist application is a cross-platform mobile application developed using the React-Native framework with Redux implementation. The application has features to create a calendar in both Google &amp; Microsoft cloud platforms, users can also receive a push notification from the server based on topic subscription.</p>
+
+<table>
+  <tr>
+    <td><img src="screenshots/react_native_logo.png" width="150" height="150"/></td>
+    <td><img src="screenshots/redux.png" width="250" height="200"/></td>
+  </tr>
+</table>
+
 <h1 id="features-">Features!</h1>
 <ul>
 <li>Social SignIn with Google, Microsoft, Facebook.</li>
@@ -68,7 +76,7 @@
 <p>To start the application on both <code>Android</code> &amp; <code>iOS</code> , there are two different command needs to be followed.</p>
 <h5 id="android-npx-react-native-run-android-">Android - <code>npx react- native run-android</code></h5>
 <h5 id="ios-npx-react-native-run-ios-">iOS - <code>npx react- native run-ios</code></h5>
-<h2 id="redux">Redux</h2>
+<img src="screenshots/redux.png" width="250" height="200"/>
 <p>Redux is an open-source JavaScript library for managing and organizing application state . There are major concepts like <code>actions</code> , <code>reducers</code> , and <code>stores</code> that Redux provides to implement a universal state for an entire application lifecycle.</p>
 <blockquote>
 <p>Official Documentation - <a href="https://redux.js.org/">https://redux.js.org/</a></p>
@@ -79,7 +87,7 @@ $ npm <span class="hljs-keyword">install</span> react-redux
 $ npm <span class="hljs-keyword">install</span> redux-thunk
 $ npm <span class="hljs-keyword">install</span> redux-logger
 </code></pre>
-<h1 id="npm-modules">npm modules</h1>
+<img src="screenshots/npm.png" width="200" height="80"/>
 <ul>
 <li><a href="https://www.npmjs.com/package/react-native-google-signin">react -native-google-signin</a></li>
 <li><a href="https://www.npmjs.com/package/react-native-app-auth">react -native-app-auth</a></li>
@@ -95,7 +103,7 @@ $ npm <span class="hljs-keyword">install</span> redux-logger
 <h5 id="code-location">Code Location</h5>
 <pre><code class="lang-sh">    - <span class="hljs-regexp">/src/</span>components<span class="hljs-regexp">/login/</span>LoginComponent.js
 </code></pre>
-<h4 id="signin-with-google">SignIn With Google</h4>
+<img src="screenshots/sign_in_google.PNG"/>
 <p>In the configuration initialization, there are required scopes that need to be defined. As these applications need <code>Google Calendar</code> , <code>Google Drive</code> integration of the APIs needs to be enabled in the <code>Google Cloud Platform</code>. And the API access scopes are required to mention in the scope array. So, that during User login it will show as a consent screen that what are access list is required from the user Google account.</p>
 <h4 id="scope">Scope</h4>
 <pre><code class="lang-sh">GoogleSignin.configure({
@@ -115,7 +123,7 @@ webClientId :
 forceConsentPrompt : true
 });
 </code></pre>
-<h4 id="signin-with-microsoft">SignIn With Microsoft</h4>
+<img src="screenshots/sign_in_microsoft.PNG"/>
 <p>The <code>Microsoft SignIn</code> is integrated by using the <code>react-native-app-auth</code> module. This module provides an <code>OAuth</code> based client authentication the technique that the developer can pass the configuration details for any cloud platforms to integrate the authentication module.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh">- <span class="hljs-regexp">/src/</span>components<span class="hljs-regexp">/auth/</span>MSAuthManager.js
@@ -147,7 +155,7 @@ forceConsentPrompt : true
 }
 };
 </code></pre>
-<h4 id="signin-with-facebook">SignIn With Facebook</h4>
+<img src="screenshots/sign_in_facebook.PNG"/>
 <p>The <code>Facebook</code> SignIn integration requires the <code>react-native-fbsdk</code> module that provides several <code>Facebook Graph APIs</code> request.</p>
 <pre><code class="lang-sh">_signInWithFacebook = <span class="hljs-keyword">async</span> () =&gt; {
 <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> LoginManager.logInWithPermissions([ <span class="hljs-string">'public_profile'</span> ,
@@ -176,37 +184,37 @@ FacebookAuthProvider.credential(data.accessToken);
 }
 }
 </code></pre>
-<h4 id="signin-with-email">SignIn With Email</h4>
+<img src="screenshots/sign_in_email.PNG"/>
 <p>The application uses <code>Email</code> based SignIn with <code>Firebase</code> using the  <code>react-native-firebase</code> module. The implementation is simple that developers need to pass only <code>email</code> &amp; <code>password</code> parameters without any other configuration requirements. However, the <code>Firebase</code> App needs to created in the <code>Firebase Cloud Platform</code> before integrating it into the application.</p>
 <pre><code class="lang-sh"><span class="hljs-function"><span class="hljs-title">_signInWithEmail</span> = <span class="hljs-params">()</span> =&gt;</span> {
-auth()
-.signInWithEmailAndPassword( <span class="hljs-keyword">this</span> .state.email, <span class="hljs-keyword">this</span> .state.password)
-.<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(data)</span> =&gt;</span> {
-<span class="hljs-built_in">console</span> .log( <span class="hljs-string">"Successful SignIn"</span> )
-})
-.<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-params">(error)</span> =&gt;</span> {
-Alert.alert( <span class="hljs-string">'Error'</span> , <span class="hljs-string">'Signin Error - '</span> + error.message);
-})
+    auth()
+    .signInWithEmailAndPassword( <span class="hljs-keyword">this</span> .state.email, <span class="hljs-keyword">this</span> .state.password)
+    .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(data)</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span> .log( <span class="hljs-string">"Successful SignIn"</span> )
+    })
+    .<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-params">(error)</span> =&gt;</span> {
+    Alert.alert( <span class="hljs-string">'Error'</span> , <span class="hljs-string">'Signin Error - '</span> + error.message);
+    })
 }
 </code></pre>
 <h1 id="calendar-integration">Calendar Integration</h1>
 <p><code>Google Calendar</code> and <code>Microsoft Calendar</code> are the major cloud-based calendar
 integration in the application. However, the application also allows creating a calendar for <code>Facebook</code> and <code>Firebase</code> SignIn users that the calendar data get stored in the <code>Firebase Database</code>.</p>
-<h3 id="google-calendar">Google Calendar</h3>
+<img src="screenshots/google_calendar.png" width="200" height="150"/>
 <p>In this application, users can create a <code>Google Calendar</code> with <code>attachments</code>, <code>event colors</code>, <code>Hangout Conference</code> , <code>Inviting Attendees</code> to an event. So, Google Calendar provides Cloud-based REST APIs that can be integrated into the application.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh"><span class="hljs-bullet">- </span>/src/actions/GoogleCalendar.js
 </code></pre>
 <h6 id="google-calendar-api-https-developers-google-com-calendar-v3-reference">Google Calendar API : <a href="https://developers.google.com/calendar/v3/reference">https://developers.google.com/calendar/v3/reference</a></h6>
-<h3 id="google-drive">Google Drive</h3>
+<img src="screenshots/google_drive.png" width="100" height="100"/>
 <p>The <code>react-native-google-drive-api-wrapper</code> module has been integrated to upload a file into <code>Google Drive</code>. The request body contains the <code>base64</code> blob for the local storage file.</p>
-<h3 id="microsoft-calendar">Microsoft Calendar</h3>
+<img src="screenshots/microsoft_calendar.jpg" width="300" height="100"/>
 <p>In this application, user can create a <code>Microsoft calendar</code> with additional features like create <code>Team conference</code> , <code>event color</code>, <code>add attachments</code> to an event, <code>invite attendees</code> to an event.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh"><span class="hljs-bullet">- </span>/src/actions/MicrosoftCalendar.js
 </code></pre>
 <h6 id="microsoft-graph-api-https-docs-microsoft-com-en-us-graph-api-resources-calendar-view-graph-rest-beta">Microsoft Graph API : <a href="https://docs.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-beta">https://docs.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-beta</a></h6>
-<h3 id="one-drive">One Drive</h3>
+<img src="screenshots/onedrive.png" width="90" height="90"/>
 <p>The attachments integration to an event requires several layers of <code>Microsoft Graph API</code> request. The feature requires to integrate <code>OneDrive</code> into the API request flow.</p>
 <h5 id="api-request-flow">API request flow</h5>
 <ul>
@@ -219,7 +227,7 @@ integration in the application. However, the application also allows creating a 
 <li><h5 id="send-invite-for-access-permission">Send Invite for access permission</h5>
   To access the attached link of the event, each attendee needs access permission from the <code>organizer</code>. So, in the request parameter the array of attendees email needs to be included.</li>
 </ul>
-<h3 id="firebase-calendar">Firebase Calendar</h3>
+<img src="screenshots/firebase.png" width="300" height="100"/>
 <p>The users that are signed-in via <code>Facebook</code> and <code>Firebase</code> can able to create a calendar with Firebase database but the features like adding attachments, online conference, invite attendees, set reminders will not be supported.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh"><span class="hljs-bullet">- </span>/src/actions/FirebaseCalendar.js
@@ -229,6 +237,7 @@ integration in the application. However, the application also allows creating a 
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh">- <span class="hljs-regexp">/src/</span>components<span class="hljs-regexp">/calendar/</span>EventDetailsComponent.js
 </code></pre>
+<img src="screenshots/fcm.png" width="300" height="150"/>
 <h2 id="push-notification">Push Notification</h2>
 <p>This application has a feature that the user can receive a <code>push notification</code> via <code>Firebase Cloud Messaging</code> servie. User can subscribe to a topic to receive notification an alert.</p>
 <h3 id="sending-push-notification-api">Sending Push Notification API</h3>
@@ -252,18 +261,70 @@ integration in the application. However, the application also allows creating a 
         <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://example.com/test.png"</span>
     },
     <span class="hljs-attr">"data"</span>: {
-  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Spacex successfully launched first crew to orbit"</span>,
-  <span class="hljs-attr">"body"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
-  <span class="hljs-attr">"topic"</span>: <span class="hljs-string">"Science"</span>,
-  <span class="hljs-attr">"small_text"</span>: <span class="hljs-string">"hello"</span>,
-  <span class="hljs-attr">"big_text"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
-  <span class="hljs-attr">"time"</span>: <span class="hljs-string">"273737"</span>,
-  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://example.com/test.png"</span>,
-  <span class="hljs-attr">"foreground"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"android_channel_id"</span>: <span class="hljs-string">"test-channel"</span>
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Spacex successfully launched first crew to orbit"</span>,
+        <span class="hljs-attr">"body"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
+        <span class="hljs-attr">"topic"</span>: <span class="hljs-string">"Science"</span>,
+        <span class="hljs-attr">"small_text"</span>: <span class="hljs-string">"hello"</span>,
+        <span class="hljs-attr">"big_text"</span>: <span class="hljs-string">"NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station"</span>,
+        <span class="hljs-attr">"time"</span>: <span class="hljs-string">"273737"</span>,
+        <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://example.com/test.png"</span>,
+        <span class="hljs-attr">"foreground"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"android_channel_id"</span>: <span class="hljs-string">"test-channel"</span>
  },
     <span class="hljs-attr">"priority"</span>: <span class="hljs-string">"high"</span>,
     <span class="hljs-attr">"to"</span>: <span class="hljs-string">"/topics/Science"</span>
 }
 </code></pre>
 <h2 id="screenshots">Screenshots</h2>
+<table>
+  <tr>
+    <td>
+      <p><b>SignIn</b></p>
+      <img src="screenshots/mobile_signin.png" width="300" height="600"/>
+    </td>
+    <td>
+      <p><b>Calendar</b></p>
+      <img src="screenshots/mobile_calendar.png" width="300" height="600"/>
+    </td>
+    <td>
+      <p>Search Planners</p>
+      <img src="screenshots/mobile_all_calendars.png" width="300" height="600"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p><b>Create Calendar</b></p>
+      <img src="screenshots/mobile_create_planner.png" width="300" height="600"/>
+    </td>
+    <td>
+      <p><b>Calendar Created Alert</b></p>
+      <img src="screenshots/mobile_create_calendar.png" width="300" height="600"/>
+    </td>
+    <td>
+      <p><b>View Planner</b></p>
+      <img src="screenshots/mobile_planner.png" width="300" height="600"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p><b>Share Planner</b></p>
+      <img src="screenshots/mobile_share_planner.png" width="300" height="600"/>
+    </td>
+    <td>
+      <p><b>News Push Notification</b></p>
+      <img src="screenshots/mobile_notification.png" width="300" height="600"/>
+    </td>
+    <td>
+      <p><b>News</b></p>
+      <img src="screenshots/mobile_news.png" width="300" height="600"/>
+    </td>
+  </tr>
+ </table>
+ 
+<h2>References</h2>
+<ul>
+<li><a href="https://reactnative.dev/docs/getting-started">Getting Started with React-Native</a></li>
+<li><a href="https://redux.js.org/introduction/getting-started">Getting Started with Redux</a></li>
+<li><a href="https://rnfirebase.io/">React Native Firebase</a></li>
+</ul>
+
