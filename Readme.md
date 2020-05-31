@@ -87,7 +87,7 @@ $ npm <span class="hljs-keyword">install</span> react-redux
 $ npm <span class="hljs-keyword">install</span> redux-thunk
 $ npm <span class="hljs-keyword">install</span> redux-logger
 </code></pre>
-<h1 id="npm-modules"><img src="screenshots/npm.png" width="250" height="200"/> modules</h1>
+<img src="screenshots/npm.png" width="200" height="80"/>
 <ul>
 <li><a href="https://www.npmjs.com/package/react-native-google-signin">react -native-google-signin</a></li>
 <li><a href="https://www.npmjs.com/package/react-native-app-auth">react -native-app-auth</a></li>
@@ -103,7 +103,7 @@ $ npm <span class="hljs-keyword">install</span> redux-logger
 <h5 id="code-location">Code Location</h5>
 <pre><code class="lang-sh">    - <span class="hljs-regexp">/src/</span>components<span class="hljs-regexp">/login/</span>LoginComponent.js
 </code></pre>
-<h4 id="signin-with-google">SignIn With Google</h4>
+<img src="screenshots/sign_in_google.PNG"/>
 <p>In the configuration initialization, there are required scopes that need to be defined. As these applications need <code>Google Calendar</code> , <code>Google Drive</code> integration of the APIs needs to be enabled in the <code>Google Cloud Platform</code>. And the API access scopes are required to mention in the scope array. So, that during User login it will show as a consent screen that what are access list is required from the user Google account.</p>
 <h4 id="scope">Scope</h4>
 <pre><code class="lang-sh">GoogleSignin.configure({
@@ -123,7 +123,7 @@ webClientId :
 forceConsentPrompt : true
 });
 </code></pre>
-<h4 id="signin-with-microsoft">SignIn With Microsoft</h4>
+<img src="screenshots/sign_in_microsoft.PNG"/>
 <p>The <code>Microsoft SignIn</code> is integrated by using the <code>react-native-app-auth</code> module. This module provides an <code>OAuth</code> based client authentication the technique that the developer can pass the configuration details for any cloud platforms to integrate the authentication module.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh">- <span class="hljs-regexp">/src/</span>components<span class="hljs-regexp">/auth/</span>MSAuthManager.js
@@ -155,7 +155,7 @@ forceConsentPrompt : true
 }
 };
 </code></pre>
-<h4 id="signin-with-facebook">SignIn With Facebook</h4>
+<img src="screenshots/sign_in_facebook.PNG"/>
 <p>The <code>Facebook</code> SignIn integration requires the <code>react-native-fbsdk</code> module that provides several <code>Facebook Graph APIs</code> request.</p>
 <pre><code class="lang-sh">_signInWithFacebook = <span class="hljs-keyword">async</span> () =&gt; {
 <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> LoginManager.logInWithPermissions([ <span class="hljs-string">'public_profile'</span> ,
@@ -184,37 +184,37 @@ FacebookAuthProvider.credential(data.accessToken);
 }
 }
 </code></pre>
-<h4 id="signin-with-email">SignIn With Email</h4>
+<img src="screenshots/sign_in_email.PNG"/>
 <p>The application uses <code>Email</code> based SignIn with <code>Firebase</code> using the  <code>react-native-firebase</code> module. The implementation is simple that developers need to pass only <code>email</code> &amp; <code>password</code> parameters without any other configuration requirements. However, the <code>Firebase</code> App needs to created in the <code>Firebase Cloud Platform</code> before integrating it into the application.</p>
 <pre><code class="lang-sh"><span class="hljs-function"><span class="hljs-title">_signInWithEmail</span> = <span class="hljs-params">()</span> =&gt;</span> {
-auth()
-.signInWithEmailAndPassword( <span class="hljs-keyword">this</span> .state.email, <span class="hljs-keyword">this</span> .state.password)
-.<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(data)</span> =&gt;</span> {
-<span class="hljs-built_in">console</span> .log( <span class="hljs-string">"Successful SignIn"</span> )
-})
-.<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-params">(error)</span> =&gt;</span> {
-Alert.alert( <span class="hljs-string">'Error'</span> , <span class="hljs-string">'Signin Error - '</span> + error.message);
-})
+    auth()
+    .signInWithEmailAndPassword( <span class="hljs-keyword">this</span> .state.email, <span class="hljs-keyword">this</span> .state.password)
+    .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(data)</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span> .log( <span class="hljs-string">"Successful SignIn"</span> )
+    })
+    .<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-params">(error)</span> =&gt;</span> {
+    Alert.alert( <span class="hljs-string">'Error'</span> , <span class="hljs-string">'Signin Error - '</span> + error.message);
+    })
 }
 </code></pre>
 <h1 id="calendar-integration">Calendar Integration</h1>
 <p><code>Google Calendar</code> and <code>Microsoft Calendar</code> are the major cloud-based calendar
 integration in the application. However, the application also allows creating a calendar for <code>Facebook</code> and <code>Firebase</code> SignIn users that the calendar data get stored in the <code>Firebase Database</code>.</p>
-<h3 id="google-calendar">Google Calendar</h3>
+<img src="screenshots/google_calendar.png" width="200" height="150"/>
 <p>In this application, users can create a <code>Google Calendar</code> with <code>attachments</code>, <code>event colors</code>, <code>Hangout Conference</code> , <code>Inviting Attendees</code> to an event. So, Google Calendar provides Cloud-based REST APIs that can be integrated into the application.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh"><span class="hljs-bullet">- </span>/src/actions/GoogleCalendar.js
 </code></pre>
 <h6 id="google-calendar-api-https-developers-google-com-calendar-v3-reference">Google Calendar API : <a href="https://developers.google.com/calendar/v3/reference">https://developers.google.com/calendar/v3/reference</a></h6>
-<h3 id="google-drive">Google Drive</h3>
+<img src="screenshots/google_drive.png" width="100" height="100"/>
 <p>The <code>react-native-google-drive-api-wrapper</code> module has been integrated to upload a file into <code>Google Drive</code>. The request body contains the <code>base64</code> blob for the local storage file.</p>
-<h3 id="microsoft-calendar">Microsoft Calendar</h3>
+<img src="screenshots/microsoft_calendar.jpg" width="300" height="100"/>
 <p>In this application, user can create a <code>Microsoft calendar</code> with additional features like create <code>Team conference</code> , <code>event color</code>, <code>add attachments</code> to an event, <code>invite attendees</code> to an event.</p>
 <h5 id="code-location">Code location</h5>
 <pre><code class="lang-sh"><span class="hljs-bullet">- </span>/src/actions/MicrosoftCalendar.js
 </code></pre>
 <h6 id="microsoft-graph-api-https-docs-microsoft-com-en-us-graph-api-resources-calendar-view-graph-rest-beta">Microsoft Graph API : <a href="https://docs.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-beta">https://docs.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-beta</a></h6>
-<h3 id="one-drive">One Drive</h3>
+<img src="screenshots/onedrive.png" width="90" height="90"/>
 <p>The attachments integration to an event requires several layers of <code>Microsoft Graph API</code> request. The feature requires to integrate <code>OneDrive</code> into the API request flow.</p>
 <h5 id="api-request-flow">API request flow</h5>
 <ul>
