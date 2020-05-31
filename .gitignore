@@ -10,8 +10,6 @@ build
 # testing
 /coverage
 
-.gitignore
-
 # production
 /admindashboard/build
 
