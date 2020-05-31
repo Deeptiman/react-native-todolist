@@ -1,0 +1,30 @@
+{
+	"notification": {
+		"title": "Final Exam 2020",
+		"body": "<p>hello</p>\n",
+		"icon": "mipmap/ic_app_logo",
+		"color": "#000",
+		"tag": "exam",
+		"local_only": true,
+		"default_sound": true,
+		"notification_priority": "high",
+		"visibility": "public",
+		"sound": "default",
+		"channel_id": "test-channel",
+		"image": "https://png.pngtree.com/element_our/sm/20180327/sm_5aba147bcacf2.png"
+	},
+	"data": {
+  "title": "Testing Notification",
+  "body": "Open Notification",
+  "type": "tree",
+  "topic": "exam",
+  "small_text": "hello",
+  "big_text": "testing big",
+  "time": "273737",
+  "image": "https://png.pngtree.com/element_our/sm/20180327/sm_5aba147bcacf2.png",
+  "foreground": true,
+  "android_channel_id": "test-channel"
+ },
+	"priority": "high",
+	"to": "/topics/exam"
+}
