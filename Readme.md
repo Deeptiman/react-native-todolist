@@ -9,7 +9,7 @@ The react-native-todolist application is a cross-platform mobile application dev
   - Share events to social apps.
   - Receive push-notification from server based on topic subscription.
 
-### Installing dependencies
+# Installing dependencies
  There are few environment setups required to install the dependencies for the development of a cross-platform application using React-Native.
   
 ##### React-Native Cli Setup
@@ -50,7 +50,9 @@ https://developer.android.com/studio/index.html
     Open `Xcode` -> Preference and then select a simulator that will be compatible with the installed `iOS` version.
     ##### CocoaPods
     This is a dependency manager that will install the required libraries for iOS development. The CocoaPods application is written in Ruby.
+
     `sudo gem install cocoapods`
+
     For more information on CocoaPods Guide -
     https://guides.cocoapods.org/using/getting-started.html
 
@@ -59,169 +61,236 @@ To start the application on both `Android` & `iOS` , there are two different com
 ##### Android - `npx react- native run-android`
 ##### iOS - `npx react- native run-ios`
 
+## Redux
+Redux is an open-source JavaScript library for managing and organizing application state . There are major concepts like `actions` , `reducers` , and `stores` that Redux provides to implement a universal state for an entire application lifecycle.
 
+> Official Documentation - https://redux.js.org/
 
-You can also:
-  - Import and save file
-  - s from GitHub, Dropbox, Google Drive and One Drive
-  - Drag and drop markdown and HTML files into Dillinger
-  - Export documents as Markdown, HTML and PDF
-
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
-
-### Tech
-
-Dillinger uses a number of open source projects to work properly:
-
-* [AngularJS] - HTML enhanced for web apps!
-* [Ace Editor] - awesome web-based text editor
-* [markdown-it] - Markdown parser done right. Fast and easy to extend.
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
-* [Gulp] - the streaming build system
-* [Breakdance](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
-* [jQuery] - duh
-
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
-
-### Installation
-
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+##### Installation
+``` sh
+$ npm install redux
+$ npm install react-redux
+$ npm install redux-thunk
+$ npm install redux-logger
 ```
 
-For production environments...
+# npm modules
+- [react -native-google-signin](https://www.npmjs.com/package/react-native-google-signin)
+- [react -native-app-auth](https://www.npmjs.com/package/react-native-app-auth)
+- [react -native-fbsdk](https://www.npmjs.com/package/react-native-fbsdk)
+- [@react -native-firebase/auth](https://www.npmjs.com/package/@react-native-firebase/auth)
+- [@react -native-firebase/database](https://www.npmjs.com/package/@react-native-firebase/database)
+- [@react -native-firebase/messaging](https://www.npmjs.com/package/@react-native-firebase/messaging)
+- [react -native-google-drive-api-wrapper](https://www.npmjs.com/package/react-native-google-drive-api-wrapper)
+- [react -native-share](https://www.npmjs.com/package/react-native-share)
 
+# Social SignIn (Google, Microsoft, Facebook)
+The application supports Social SignIn that users can authenticate into the app using `Google` , `Microsoft` , `Facebook`, and also normal email-based SignIn integrated Google `Firebase`.
+    
+##### Code Location
+ ```sh
+    - /src/components/login/LoginComponent.js
+ ```
+
+#### SignIn With Google
+In the configuration initialization, there are required scopes that need to be defined. As these applications need `Google Calendar` , `Google Drive` integration of the APIs needs to be enabled in the `Google Cloud Platform`. And the API access scopes are required to mention in the scope array. So, that during User login it will show as a consent screen that what are access list is required from the user Google account.
+#### Scope
 ```sh
-$ npm install --production
-$ NODE_ENV=production node app
+GoogleSignin.configure({
+scopes : [
+'https://www.googleapis.com/auth/calendar.readonly',
+'https://www.googleapis.com/auth/calendar' ,
+'https://www.googleapis.com/auth/calendar.events' ,
+'https://www.googleapis.com/auth/drive' ,
+'https://www.googleapis.com/auth/drive.appdata' ,
+'https://www.googleapis.com/auth/drive.file' ,
+'https://www.googleapis.com/auth/drive.readonly' ,
+'https://www.googleapis.com/auth/drive.metadata.readonly' ,
+'https://www.googleapis.com/auth/drive.metadata' ,
+'https://www.googleapis.com/auth/drive.photos.readonly' ],
+webClientId :
+'YOUR_WEB_CLIENT_ID' ,
+forceConsentPrompt : true
+});
 ```
 
-### Plugins
+#### SignIn With Microsoft
+The `Microsoft SignIn` is integrated by using the `react-native-app-auth` module. This module provides an `OAuth` based client authentication the technique that the developer can pass the configuration details for any cloud platforms to integrate the authentication module.
 
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
-
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
-
-### Development
-
-Want to contribute? Great!
-
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-First Tab:
+##### Code location
 ```sh
-$ node app
+- /src/components/auth/MSAuthManager.js
+- /src/components/auth/MSGraphAuthProvider.js
+- /src/components/auth/MSGraphManager.js
+- /src/components/login/LoginComponent.js
 ```
 
-Second Tab:
+#### Scope
 ```sh
-$ gulp watch
+const config = {
+clientId : 'YOUR_MICROSOFT_AZURE_CLIENT_ID' ,
+redirectUrl : Platform.OS === 'ios' ? 'YOUR_MICROSOFT_AZURE_IO_REDIRECT_URL' :
+'graph-tutorial://react-native-auth' ,
+scopes : [
+'openid' ,
+'offline_access' ,
+'profile' ,
+'user.read' ,
+'Calendars.ReadWrite' ,
+'Files.ReadWrite.All' ,
+'Sites.ReadWrite.All' ,
+'MailboxSettings.ReadWrite'
+],
+additionalParameters : { prompt : 'select_account' },
+serviceConfiguration : {
+authorizationEndpoint :
+'https://login.microsoftonline.com/common/oauth2/v2.0/authorize' ,
+tokenEndpoint :
+'https://login.microsoftonline.com/common/oauth2/v2.0/token' ,
+}
+};
 ```
 
-(optional) Third:
-```sh
-$ karma test
-```
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
-### Docker
-Dillinger is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
+#### SignIn With Facebook
+The `Facebook` SignIn integration requires the `react-native-fbsdk` module that provides several `Facebook Graph APIs` request.
 
 ```sh
-cd dillinger
-docker build -t joemccann/dillinger:${package.json.version} .
+_signInWithFacebook = async () => {
+const result = await LoginManager.logInWithPermissions([ 'public_profile' ,
+'email' ]);
+if (result.isCancelled) {
+console .log( 'User cancelled the login process' );
+} else {
+// Once signed in, get the users AccesToken
+const data = await AccessToken.getCurrentAccessToken();
+if (!data) {
+console .log( 'Something went wrong obtaining access token' );
+}
+console .log( "FACEBOOK ACCESS TOKEN :::: " + data.accessToken)
+const facebookCredential = auth.
+FacebookAuthProvider.credential(data.accessToken);
+await auth().signInWithCredential(facebookCredential);
+const infoRequest = await new GraphRequest( '/me' , {
+parameters : {
+'fields' : {
+'string' : 'email,first_name,last_name,picture'
+}
+}
+}, (err, res) => {
+});
+await new GraphRequestManager().addRequest(infoRequest).start();
+}
+}
 ```
-This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
 
-Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
+#### SignIn With Email
+The application uses `Email` based SignIn with `Firebase` using the  `react-native-firebase` module. The implementation is simple that developers need to pass only `email` & `password` parameters without any other configuration requirements. However, the `Firebase` App needs to created in the `Firebase Cloud Platform` before integrating it into the application.
 ```sh
-docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
+_signInWithEmail = () => {
+auth()
+.signInWithEmailAndPassword( this .state.email, this .state.password)
+.then((data) => {
+console .log( "Successful SignIn" )
+})
+.catch((error) => {
+Alert.alert( 'Error' , 'Signin Error - ' + error.message);
+})
+}
 ```
 
-Verify the deployment by navigating to your server address in your preferred browser.
+# Calendar Integration
+`Google Calendar` and `Microsoft Calendar` are the major cloud-based calendar
+integration in the application. However, the application also allows creating a calendar for `Facebook` and `Firebase` SignIn users that the calendar data get stored in the `Firebase Database`.
 
+### Google Calendar
+In this application, users can create a `Google Calendar` with `attachments`, `event colors`, `Hangout Conference` , `Inviting Attendees` to an event. So, Google Calendar provides Cloud-based REST APIs that can be integrated into the application.
+
+##### Code location
 ```sh
-127.0.0.1:8000
+- /src/actions/GoogleCalendar.js
+```
+###### Google Calendar API : https://developers.google.com/calendar/v3/reference
+
+### Google Drive
+The `react-native-google-drive-api-wrapper` module has been integrated to upload a file into `Google Drive`. The request body contains the `base64` blob for the local storage file.
+
+### Microsoft Calendar
+In this application, user can create a `Microsoft calendar` with additional features like create `Team conference` , `event color`, `add attachments` to an event, `invite attendees` to an event.
+
+##### Code location
+```sh
+- /src/actions/MicrosoftCalendar.js
 ```
 
-#### Kubernetes + Google Cloud
+###### Microsoft Graph API : https://docs.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-beta
 
-See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+### One Drive
+The attachments integration to an event requires several layers of `Microsoft Graph API` request. The feature requires to integrate `OneDrive` into the API request flow.
+##### API request flow
+- ##### Upload file
+    In the first step, the files need to upload into the `OneDrive` cloud to receive the list of `OneDrive IDs` for each file. The `base64` blob will be sent in the request parameter.
+- ##### Create a Share Link
+   After uploading each file into the `OneDrive` , a `shareable link` needs to be created using `Microsoft Graph API`.
+- ##### Add Shareable Link to the event
+    The shareable link can be added to an event after the event creation. `Microsoft Graph API` doesn't include attachments request parameters in the event creation. So, there is a completely separate API to attach a link to the events using the created eventId.
+- ##### Send Invite for access permission
+    To access the attached link of the event, each attendee needs access permission from the `organizer`. So, in the request parameter the array of attendees email needs to be included.
 
+### Firebase Calendar
+The users that are signed-in via `Facebook` and `Firebase` can able to create a calendar with Firebase database but the features like adding attachments, online conference, invite attendees, set reminders will not be supported.
 
-### Todos
+##### Code location
+```sh
+- /src/actions/FirebaseCalendar.js
+```
 
- - Write MORE Tests
- - Add Night Mode
+## Share Events to Social Apps
+In this application, the user can share an event in any `Social Apps`. However the sharing functionality will only work with `Google` & `Microsoft` created events that generates an event web link.
 
-License
-----
+##### Code location
+```sh
+- /src/components/calendar/EventDetailsComponent.js
+```
 
-MIT
+## Push Notification
+This application has a feature that the user can receive a `push notification` via `Firebase Cloud Messaging` servie. User can subscribe to a topic to receive notification an alert.
 
+### Sending Push Notification API
+##### API endpoint
+```sh
+https://fcm.googleapis.com/fcm/send
+```
+##### Request Payload
+```sh
+{
+	"notification": {
+		"title": "Spacex successfully launched first crew to orbit",
+		"body": "NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station",
+		"icon": "mipmap/ic_app_logo",
+		"color": "#000",
+		"tag": "Science",
+		"local_only": true,
+		"default_sound": true,
+		"notification_priority": "high",
+		"visibility": "public",
+		"sound": "default",
+		"channel_id": "test-channel",
+		"image": "https://example.com/test.png"
+	},
+	"data": {
+  "title": "Spacex successfully launched first crew to orbit",
+  "body": "NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station",
+  "topic": "Science",
+  "small_text": "hello",
+  "big_text": "NASA astronauts Bob Behnken and Doug Hurley are on their way to the space station",
+  "time": "273737",
+  "image": "https://example.com/test.png",
+  "foreground": true,
+  "android_channel_id": "test-channel"
+ },
+	"priority": "high",
+	"to": "/topics/Science"
+}
+```
 
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
+## Screenshots
