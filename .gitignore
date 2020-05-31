@@ -2,7 +2,6 @@
 
 # dependencies
 node_modules
-java_pid12220.hprof
 build
 .gradle
 /.pnp
@@ -10,6 +9,8 @@ build
 
 # testing
 /coverage
+
+.gitignore
 
 # production
 /admindashboard/build
