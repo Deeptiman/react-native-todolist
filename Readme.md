@@ -82,12 +82,6 @@
 <blockquote>
 <p>Official Documentation - <a href="https://redux.js.org/">https://redux.js.org/</a></p>
 </blockquote>
-<h5 id="installation">Installation</h5>
-<pre><code class="lang-sh">$ npm <span class="hljs-keyword">install</span> redux
-$ npm <span class="hljs-keyword">install</span> react-redux
-$ npm <span class="hljs-keyword">install</span> redux-thunk
-$ npm <span class="hljs-keyword">install</span> redux-logger
-</code></pre>
 <img src="screenshots/npm.png" width="200" height="80"/>
 <ul>
 <li><a href="https://www.npmjs.com/package/react-native-google-signin">react -native-google-signin</a></li>
