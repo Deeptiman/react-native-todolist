@@ -301,7 +301,7 @@ integration in the application. However, the application also allows creating a 
       <img src="screenshots/mobile_create_calendar.png" width="300" height="600"/>
     </td>
     <td>
-      <p>View Planner</p>
+      <p><b>View Planner</b></p>
       <img src="screenshots/mobile_planner.png" width="300" height="600"/>
     </td>
   </tr>
@@ -315,7 +315,7 @@ integration in the application. However, the application also allows creating a 
       <img src="screenshots/mobile_notification.png" width="300" height="600"/>
     </td>
     <td>
-      <p>News</p>
+      <p><b>News</b></p>
       <img src="screenshots/mobile_news.png" width="300" height="600"/>
     </td>
   </tr>
