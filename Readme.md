@@ -11,10 +11,10 @@
 <h1 id="features-">Features!</h1>
 <ul>
 <li>Social SignIn with Google, Microsoft, Facebook.</li>
-<li>Google &amp; Microsoft Calendar integration that user can create new events.</li>
-<li>Upload attachements with Google Drive and One Drive. </li>
-<li>Share events to social apps.</li>
-<li>Receive push-notification from server based on topic subscription.</li>
+<li>Google &amp; Microsoft Calendar integration that users can create new events.</li>
+<li>Upload attachments with Google Drive and One Drive. </li>
+<li>Share events with social apps.</li>
+<li>Receive push-notification from the server based on topic subscription.</li>
 </ul>
 <h1 id="installing-dependencies">Installing dependencies</h1>
 <p> There are few environment setups required to install the dependencies for the development of a cross-platform application using React-Native.</p>
