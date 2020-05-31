@@ -108,21 +108,21 @@ $ npm <span class="hljs-keyword">install</span> redux-logger
 <p>In the configuration initialization, there are required scopes that need to be defined. As these applications need <code>Google Calendar</code> , <code>Google Drive</code> integration of the APIs needs to be enabled in the <code>Google Cloud Platform</code>. And the API access scopes are required to mention in the scope array. So, that during User login it will show as a consent screen that what are access list is required from the user Google account.</p>
 <h4 id="scope">Scope</h4>
 <pre><code class="lang-sh">GoogleSignin.configure({
-<span class="hljs-attribute">scopes</span> : [
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/calendar<span class="hljs-variable">.readonly</span>',
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/calendar' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/calendar<span class="hljs-variable">.events</span>' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.appdata</span>' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.file</span>' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.readonly</span>' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.metadata</span><span class="hljs-variable">.readonly</span>' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.metadata</span>' ,
-'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.photos</span><span class="hljs-variable">.readonly</span>' ],
-webClientId :
-'YOUR_WEB_CLIENT_ID' ,
-forceConsentPrompt : true
-});
+    <span class="hljs-attribute">scopes</span> : [
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/calendar<span class="hljs-variable">.readonly</span>',
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/calendar' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/calendar<span class="hljs-variable">.events</span>' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.appdata</span>' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.file</span>' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.readonly</span>' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.metadata</span><span class="hljs-variable">.readonly</span>' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.metadata</span>' ,
+    'https://www<span class="hljs-variable">.googleapis</span><span class="hljs-variable">.com</span>/auth/drive<span class="hljs-variable">.photos</span><span class="hljs-variable">.readonly</span>' ],
+    webClientId :
+    'YOUR_WEB_CLIENT_ID' ,
+    forceConsentPrompt : true
+    });
 </code></pre>
 <img src="screenshots/sign_in_microsoft.PNG"/>
 <p>The <code>Microsoft SignIn</code> is integrated by using the <code>react-native-app-auth</code> module. This module provides an <code>OAuth</code> based client authentication the technique that the developer can pass the configuration details for any cloud platforms to integrate the authentication module.</p>
@@ -134,49 +134,49 @@ forceConsentPrompt : true
 </code></pre>
 <h4 id="scope">Scope</h4>
 <pre><code class="lang-sh">const config = {
-<span class="hljs-string">clientId :</span> <span class="hljs-string">'YOUR_MICROSOFT_AZURE_CLIENT_ID'</span> ,
-<span class="hljs-string">redirectUrl :</span> Platform.OS === <span class="hljs-string">'ios'</span> ? 'YOUR_MICROSOFT_AZURE_IO_REDIRECT_URL' :
-<span class="hljs-string">'graph-tutorial://react-native-auth'</span> ,
-<span class="hljs-string">scopes :</span> [
-<span class="hljs-string">'openid'</span> ,
-<span class="hljs-string">'offline_access'</span> ,
-<span class="hljs-string">'profile'</span> ,
-<span class="hljs-string">'user.read'</span> ,
-<span class="hljs-string">'Calendars.ReadWrite'</span> ,
-<span class="hljs-string">'Files.ReadWrite.All'</span> ,
-<span class="hljs-string">'Sites.ReadWrite.All'</span> ,
-<span class="hljs-string">'MailboxSettings.ReadWrite'</span>
-],
-<span class="hljs-string">additionalParameters :</span> { <span class="hljs-string">prompt :</span> <span class="hljs-string">'select_account'</span> },
-<span class="hljs-string">serviceConfiguration :</span> {
-<span class="hljs-string">authorizationEndpoint :</span>
-<span class="hljs-string">'https://login.microsoftonline.com/common/oauth2/v2.0/authorize'</span> ,
-<span class="hljs-string">tokenEndpoint :</span>
-<span class="hljs-string">'https://login.microsoftonline.com/common/oauth2/v2.0/token'</span> ,
-}
+      <span class="hljs-string">clientId :</span> <span class="hljs-string">'YOUR_MICROSOFT_AZURE_CLIENT_ID'</span> ,
+      <span class="hljs-string">redirectUrl :</span> Platform.OS === <span class="hljs-string">'ios'</span> ? 'YOUR_MICROSOFT_AZURE_IO_REDIRECT_URL' :
+      <span class="hljs-string">'graph-tutorial://react-native-auth'</span> ,
+      <span class="hljs-string">scopes :</span> [
+      <span class="hljs-string">'openid'</span> ,
+      <span class="hljs-string">'offline_access'</span> ,
+      <span class="hljs-string">'profile'</span> ,
+      <span class="hljs-string">'user.read'</span> ,
+      <span class="hljs-string">'Calendars.ReadWrite'</span> ,
+      <span class="hljs-string">'Files.ReadWrite.All'</span> ,
+      <span class="hljs-string">'Sites.ReadWrite.All'</span> ,
+      <span class="hljs-string">'MailboxSettings.ReadWrite'</span>
+      ],
+      <span class="hljs-string">additionalParameters :</span> { <span class="hljs-string">prompt :</span> <span class="hljs-string">'select_account'</span> },
+      <span class="hljs-string">serviceConfiguration :</span> {
+      <span class="hljs-string">authorizationEndpoint :</span>
+      <span class="hljs-string">'https://login.microsoftonline.com/common/oauth2/v2.0/authorize'</span> ,
+      <span class="hljs-string">tokenEndpoint :</span>
+      <span class="hljs-string">'https://login.microsoftonline.com/common/oauth2/v2.0/token'</span> ,
+      }
 };
 </code></pre>
 <img src="screenshots/sign_in_facebook.PNG"/>
 <p>The <code>Facebook</code> SignIn integration requires the <code>react-native-fbsdk</code> module that provides several <code>Facebook Graph APIs</code> request.</p>
 <pre><code class="lang-sh">_signInWithFacebook = <span class="hljs-keyword">async</span> () =&gt; {
 <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> LoginManager.logInWithPermissions([ <span class="hljs-string">'public_profile'</span> ,
-<span class="hljs-string">'email'</span> ]);
-<span class="hljs-keyword">if</span> (result.isCancelled) {
-<span class="hljs-built_in">console</span> .log( <span class="hljs-string">'User cancelled the login process'</span> );
-} <span class="hljs-keyword">else</span> {
-<span class="hljs-comment">// Once signed in, get the users AccesToken</span>
-<span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> AccessToken.getCurrentAccessToken();
-<span class="hljs-keyword">if</span> (!data) {
-<span class="hljs-built_in">console</span> .log( <span class="hljs-string">'Something went wrong obtaining access token'</span> );
-}
-<span class="hljs-built_in">console</span> .log( <span class="hljs-string">"FACEBOOK ACCESS TOKEN :::: "</span> + data.accessToken)
-<span class="hljs-keyword">const</span> facebookCredential = auth.
-FacebookAuthProvider.credential(data.accessToken);
-<span class="hljs-keyword">await</span> auth().signInWithCredential(facebookCredential);
-<span class="hljs-keyword">const</span> infoRequest = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> GraphRequest( <span class="hljs-string">'/me'</span> , {
-<span class="hljs-attr">parameters</span> : {
-<span class="hljs-string">'fields'</span> : {
-<span class="hljs-string">'string'</span> : <span class="hljs-string">'email,first_name,last_name,picture'</span>
+      <span class="hljs-string">'email'</span> ]);
+      <span class="hljs-keyword">if</span> (result.isCancelled) {
+      <span class="hljs-built_in">console</span> .log( <span class="hljs-string">'User cancelled the login process'</span> );
+      } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// Once signed in, get the users AccesToken</span>
+      <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> AccessToken.getCurrentAccessToken();
+      <span class="hljs-keyword">if</span> (!data) {
+      <span class="hljs-built_in">console</span> .log( <span class="hljs-string">'Something went wrong obtaining access token'</span> );
+      }
+      <span class="hljs-built_in">console</span> .log( <span class="hljs-string">"FACEBOOK ACCESS TOKEN :::: "</span> + data.accessToken)
+      <span class="hljs-keyword">const</span> facebookCredential = auth.
+      FacebookAuthProvider.credential(data.accessToken);
+      <span class="hljs-keyword">await</span> auth().signInWithCredential(facebookCredential);
+      <span class="hljs-keyword">const</span> infoRequest = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> GraphRequest( <span class="hljs-string">'/me'</span> , {
+      <span class="hljs-attr">parameters</span> : {
+      <span class="hljs-string">'fields'</span> : {
+      <span class="hljs-string">'string'</span> : <span class="hljs-string">'email,first_name,last_name,picture'</span>
 }
 }
 }, (err, res) =&gt; {
