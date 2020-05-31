@@ -285,7 +285,7 @@ integration in the application. However, the application also allows creating a 
       <img src="screenshots/mobile_calendar.png" width="300" height="600"/>
     </td>
     <td>
-      <p>Search Planners</p>
+      <p><b>Search Planners</b></p>
       <img src="screenshots/mobile_all_calendars.png" width="300" height="600"/>
     </td>
   </tr>
