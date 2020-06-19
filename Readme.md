@@ -1,4 +1,5 @@
 <h1 id="react-native-todolist">react-native-todolist</h1>
+<p>     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Deeptiman/react-native-todolist">  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Deeptiman/react-native-todolist"> <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Deeptiman/react-native-todolist"></p>
 <p>The react-native-todolist application is a cross-platform mobile application developed using the React-Native framework with Redux implementation. The application has features to create a calendar in both Google &amp; Microsoft cloud platforms, users can also receive a push notification from the server based on topic subscription.</p>
 
 <table>
